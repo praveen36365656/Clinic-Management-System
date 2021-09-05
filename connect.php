@@ -1,10 +1,10 @@
 <?php
 /* Local Database*/
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "clinic_db";
+$servername = "remotemysql.com";
+$username = "sRir8GlKji";
+$password = "fsF8OOx9Wr";
+$dbname = "sRir8GlKji";
 
 
 // Create connection

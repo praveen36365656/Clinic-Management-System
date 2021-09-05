@@ -303,7 +303,7 @@ CREATE TABLE `orders` (
   `card_no` varchar(20) NOT NULL,
   `cvv_no` varchar(5) NOT NULL,
   `expdate` date NOT NULL,
-  `card_holder` varchar(50) NOT NULL
+  `card_holder` varchar(50) NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -327,7 +327,7 @@ CREATE TABLE `patient` (
   `gender` varchar(10) NOT NULL,
   `dob` date NOT NULL,
   `status` varchar(10) NOT NULL,
-  `delete_status` int(11) NOT NULL
+  `delete_status` int(11) NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -356,7 +356,7 @@ CREATE TABLE `payment` (
   `cardholder` varchar(50) NOT NULL,
   `cardnumber` int(25) NOT NULL,
   `cvvno` int(5) NOT NULL,
-  `expdate` date NOT NULL
+  `expdate` date NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

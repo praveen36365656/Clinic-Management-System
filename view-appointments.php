@@ -139,7 +139,7 @@ if(isset($_GET['delid']))
     $sql ="SELECT * FROM appointment WHERE (status !='') and delete_status='0'";
     if(isset($_SESSION['patientid']))
     {
-      $sql  = $sql . " AND patientid='$_SESSION[patientid]'";
+      echo $sql  = $sql . " AND patientid='$_SESSION[patientid]'";
     }
     $qsql = mysqli_query($conn,$sql);
     while($rs = mysqli_fetch_array($qsql))

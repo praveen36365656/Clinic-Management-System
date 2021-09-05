@@ -4,6 +4,7 @@
 <?php include('sidebar.php');?>
 <?php include('connect.php');
 
+
 if(isset($_POST['btn_submit']))
 {
   if(isset($_GET['editid']))
@@ -66,7 +67,7 @@ if(isset($_POST['btn_submit']))
 }
 if(isset($_GET['editid']))
 {
-    $sql="SELECT * FROM appointment WHERE appointmentid='$_GET[editid]' ";
+    $sql="SELECT * FROM appointment WHERE appointmentid='$_GET[editid]'";
     $qsql = mysqli_query($conn,$sql);
     $rsedit = mysqli_fetch_array($qsql);
 
@@ -139,6 +140,10 @@ if(isset($_GET['editid']))
         $qsqlpatient = mysqli_query($conn,$sqlpatient);
         while($rspatient=mysqli_fetch_array($qsqlpatient))
         {
+
+		echo $rspatient[patientid];
+
+
             if($rspatient[patientid] == $rsedit[patientid])
             {
              echo "<option value='$rspatient[patientid]' selected>$rspatient[patientid] - $rspatient[patientname]</option>";

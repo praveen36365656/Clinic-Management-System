@@ -40,7 +40,8 @@ if(isset($_POST['btn_submit']))
         }
         $salt = createSalt();
         $pass = hash('sha256', $salt . $passw);
-        $sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,mobileno,city,pincode,loginid,password,bloodgroup,gender,dob,status) values('$_POST[patientname]','$_POST[admissiondate]','$_POST[admissiontime]','$_POST[address]','$_POST[mobilenumber]','$_POST[city]','$_POST[pincode]','$_POST[loginid]','$pass','$_POST[select2]','$_POST[gender]','$_POST[dateofbirth]','Active')";
+        $sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,mobileno,city,pincode,loginid,password,bloodgroup,gender,dob,status)values('$_POST[patientname]','$_POST[admissiondate]','$_POST[admissiontime]','$_POST[address]','$_POST[mobilenumber]','$_POST[city]','$_POST[pincode]'
+,'$_POST[loginid]','$pass','$_POST[select2]','$_POST[gender]','$_POST[dateofbirth]','Active')";
         if($qsql = mysqli_query($conn,$sql))
         {
 ?>
